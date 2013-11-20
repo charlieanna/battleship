@@ -1,0 +1,19 @@
+<%= form_for @board do |f| %>
+  <%= f.label :aircraft_carrier_position %><br>
+  <%= f.text_field :aircraft_carrier_position %>
+  <%= f.select :aircraft_carrier_orientation, [['right', 'right'], ['left', 'left'], ['up', 'up'], ['down', 'down']] %>
+  <%= f.label :battleship_position %><br>
+  <%= f.text_field :battleship_position %>
+  <%= f.select :battleship_orientation, [['right', 'right'], ['left', 'left'], ['up', 'up'], ['down', 'down']] %>
+  <%= f.label :submarine_position %><br>
+  <%= f.text_field :submarine_position %>
+  <%= f.select :submarine_orientation, [['right', 'right'], ['left', 'left'], ['up', 'up'], ['down', 'down']] %>
+  <%= f.label :cruiser_position %><br>
+  <%= f.text_field :cruiser_position %>
+  <%= f.select :cruiser_orientation, [['right', 'right'], ['left', 'left'], ['up', 'up'], ['down', 'down']] %>
+  <%= f.label :destroyer_position %><br>
+  <%= f.text_field :destroyer_position %>
+  <%= f.select :destroyer_orientation, [['right', 'right'], ['left', 'left'], ['up', 'up'], ['down', 'down']] %>
+
+  <%= f.submit "submit" %>
+<% end %>
