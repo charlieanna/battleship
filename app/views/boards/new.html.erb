@@ -1,0 +1,11 @@
+<h1><%= @player %></h1>
+<%= form_for @board do |f| %>
+  <% ships.each do |ship| %>
+    <%= f.label "#{ship}_position" %><br>
+    <%= f.select "#{ship}_position_column", column_select_options %>
+    <%= f.select "#{ship}_position_row", row_select_options %>
+    <%= f.select "#{ship}_orientation", orientation_select_options %><br>
+  <% end %>
+
+  <%= f.submit "submit" %>
+<% end %>

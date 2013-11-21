@@ -1,5 +1,5 @@
 class GamesController < ApplicationController
   def new
-    @board = Board.new
+    redirect_to new_board_path
   end
 end
