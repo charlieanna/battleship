@@ -5,7 +5,12 @@ class BoardsController < ApplicationController
   end
 
   def create
-    session[:player_1_board] = Board.new(params[:board])
-    redirect_to new_board_path
+    if session[:player_1_board]
+      session[:player_2_board] = Board.new(params[:board])
+      redirect_to new_turn_path
+    else
+      session[:player_1_board] = Board.new(params[:board])
+      redirect_to new_board_path
+    end
   end
 end

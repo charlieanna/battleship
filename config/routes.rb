@@ -3,4 +3,5 @@ Battleship::Application.routes.draw do
 
   resources :games, only: [:new]
   resources :boards, only: [:new, :create]
+  resources :turns, only: [:new]
 end

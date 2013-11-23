@@ -1,0 +1,10 @@
+<h1><%= @player %>'s turn</h1>
+
+<%= form_for @board do |form| %>
+  <% @board.columns.each do |column| %>
+    <% @board.rows.each do |row| %>
+      <%= form.radio_button :move, "#{column}#{row}" %>
+    <% end %>
+  <% end %>
+  <%= form.submit "submit" %>
+<% end %>
